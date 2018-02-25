@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <style>
+        body{
+          background-color: #dddddd;
+        }
+.initComponent, .diffVersion{
+  background-color: #4adf80
+}
+.sameVersion{
+  background-color: #dddddd
+}
+.reinstall{
+  background-color: #4fc3f7
+}
+.error{
+  background-color: #ff5722
+}
+
+
+table tbody tr td, table tbody tr th{
+  border-radius: 0
+}
+table tbody tr th{
+  text-align: center;
+  color: #bbbbbb;
+  font-weight: normal;
+}
+        .diff-table{
+          width: 400px;
+          margin: 0 auto 0 auto
+        }
+
+table.diff-table  tr:first-child
+{
+  background-color: #444444;
+}
+table.diff-table  tr:first-child th:first-child
+{
+  border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+}
+table.diff-table  tr:first-child th:last-child
+{
+  border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+}
+table.diff-table  tr:last-child td:first-child
+{
+  border-bottom-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+}
+table.diff-table  tr:last-child td:last-child
+{
+  border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+}
+
+table {
+  box-shadow: 5px 5px 20px #999;
+  border-radius: 20px;
+
+}
+        td:nth-child(1) {
+          text-align: left;
+          padding-left: 30px;
+        }
+        td:nth-child(2) {
+          text-align: right;
+        }
+        td:nth-child(3)  {
+          padding: 0;
+        }
+        td i.material-icons {
+          float:left;
+          opacity: 0.7;
+          padding-left: 15px;
+        }
+        .installDetails {
+          width:500px;
+          margin: 0 auto 0 auto;
+          text-align: left;
+          margin-bottom: 40px;
+        }
+</style>
+
+<div class="installContainer center-align">
+
+  <div class="installDetails">
+    <h3>DEV 3</h3>
+    <h5>fxoms-runtime 0.1.2</h5>
+    <p>
+    <ul >
+      <li>
+        Args: deploy
+      </li>
+    </ul>
+    </p>
+  </div>
+
+<table class="center-align diff-table"><tr><th>Service</th><th colspan="3">Version Change</th></tr>
+
+  <tr class='initComponent'><td>bonus-service</td><td></td><td><div><i class="material-icons">fiber_new</i></div></td><td>3.4</td></tr>
+<tr class='reinstall'><td>disco-service</td><td>1.2.2</td><td><i class="material-icons">autorenew</i></td><td>1.2.2</td></tr>
+<tr class='diffVersion'><td>nutrition-service</td><td>1.0.1</td><td><i class="material-icons">arrow_forward</i></td><td>1.1.0.1</td></tr>
+<tr class='error'><td>rapis-service</td><td>44.999</td><td></td><td></td></tr>
+<tr class='diffVersion'><td>runtime</td><td>1.0.0</td><td></td><td>1.2.0</td></tr>
+</table></div></body></html>
